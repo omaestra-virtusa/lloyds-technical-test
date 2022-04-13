@@ -7,15 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C624BF44B17044A96B191096 /* Pods_lloyds_technical_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE04C517133905612E827C29 /* Pods_lloyds_technical_test.framework */; };
+		CE170F142807021300A18449 /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F132807021300A18449 /* URLRequestBuilder.swift */; };
+		CE170F16280702DC00A18449 /* AppEnvironement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F15280702DC00A18449 /* AppEnvironement.swift */; };
+		CE170F182807032600A18449 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F172807032600A18449 /* Endpoint.swift */; };
+		CE170F1A2807054500A18449 /* StocksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F192807054500A18449 /* StocksService.swift */; };
+		CE170F1D280705A800A18449 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F1C280705A800A18449 /* Quote.swift */; };
+		CE170F1F28070F8300A18449 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F1E28070F8300A18449 /* Navigator.swift */; };
+		CE170F212807100F00A18449 /* APIResponseWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F202807100F00A18449 /* APIResponseWrapper.swift */; };
+		CE170F252807216A00A18449 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F232807216A00A18449 /* MainTabBarViewController.swift */; };
+		CE170F28280723A800A18449 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F27280723A800A18449 /* AppNavigator.swift */; };
+		CE170F2A2807306D00A18449 /* TabNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F292807306D00A18449 /* TabNavigator.swift */; };
+		CE170F2C280730AC00A18449 /* TabBarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F2B280730AC00A18449 /* TabBarPage.swift */; };
+		CE170F2F28073D6200A18449 /* StocksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F2D28073D6200A18449 /* StocksTableViewController.swift */; };
+		CE170F3028073D6200A18449 /* StocksTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE170F2E28073D6200A18449 /* StocksTableViewController.xib */; };
+		CE170F3328073D7F00A18449 /* StocksListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F3228073D7F00A18449 /* StocksListPresenter.swift */; };
+		CE170F3728073DC300A18449 /* StockQuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F3528073DC300A18449 /* StockQuoteTableViewCell.swift */; };
+		CE170F3828073DC300A18449 /* StockQuoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE170F3628073DC300A18449 /* StockQuoteTableViewCell.xib */; };
+		CE170F3B28074E0400A18449 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F3A28074E0400A18449 /* BasePresenter.swift */; };
+		CE170F3D28074E2100A18449 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F3C28074E2100A18449 /* BaseView.swift */; };
+		CE170F3F280751C300A18449 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F3E280751C300A18449 /* NibLoadableView.swift */; };
+		CE170F41280751D600A18449 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F40280751D600A18449 /* ReusableView.swift */; };
+		CE170F442807599C00A18449 /* StocksListNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F432807599C00A18449 /* StocksListNavigator.swift */; };
+		CE170F4C2807646100A18449 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F4B2807646100A18449 /* UIView+.swift */; };
+		CE170F502807661900A18449 /* TagLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE170F4F2807661900A18449 /* TagLabelView.xib */; };
+		CE170F52280766B000A18449 /* TagLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F51280766B000A18449 /* TagLabelView.swift */; };
 		CE5E3FAD2806FA4D00C03FDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E3FAC2806FA4D00C03FDB /* AppDelegate.swift */; };
 		CE5E3FAF2806FA4D00C03FDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E3FAE2806FA4D00C03FDB /* SceneDelegate.swift */; };
 		CE5E3FB12806FA4D00C03FDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E3FB02806FA4D00C03FDB /* ViewController.swift */; };
 		CE5E3FB42806FA4D00C03FDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5E3FB22806FA4D00C03FDB /* Main.storyboard */; };
 		CE5E3FB62806FA5100C03FDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5E3FB52806FA5100C03FDB /* Assets.xcassets */; };
 		CE5E3FB92806FA5100C03FDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5E3FB72806FA5100C03FDB /* LaunchScreen.storyboard */; };
+		CE5E3FC82806FD8600C03FDB /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E3FC72806FD8600C03FDB /* Networking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C215A5E7AAB639409ACDDB0 /* Pods-lloyds-technical-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lloyds-technical-test.release.xcconfig"; path = "Target Support Files/Pods-lloyds-technical-test/Pods-lloyds-technical-test.release.xcconfig"; sourceTree = "<group>"; };
+		AE04C517133905612E827C29 /* Pods_lloyds_technical_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lloyds_technical_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE170F132807021300A18449 /* URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
+		CE170F15280702DC00A18449 /* AppEnvironement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironement.swift; sourceTree = "<group>"; };
+		CE170F172807032600A18449 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		CE170F192807054500A18449 /* StocksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksService.swift; sourceTree = "<group>"; };
+		CE170F1C280705A800A18449 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		CE170F1E28070F8300A18449 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		CE170F202807100F00A18449 /* APIResponseWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseWrapper.swift; sourceTree = "<group>"; };
+		CE170F232807216A00A18449 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		CE170F27280723A800A18449 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
+		CE170F292807306D00A18449 /* TabNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigator.swift; sourceTree = "<group>"; };
+		CE170F2B280730AC00A18449 /* TabBarPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPage.swift; sourceTree = "<group>"; };
+		CE170F2D28073D6200A18449 /* StocksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksTableViewController.swift; sourceTree = "<group>"; };
+		CE170F2E28073D6200A18449 /* StocksTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StocksTableViewController.xib; sourceTree = "<group>"; };
+		CE170F3228073D7F00A18449 /* StocksListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksListPresenter.swift; sourceTree = "<group>"; };
+		CE170F3528073DC300A18449 /* StockQuoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockQuoteTableViewCell.swift; sourceTree = "<group>"; };
+		CE170F3628073DC300A18449 /* StockQuoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockQuoteTableViewCell.xib; sourceTree = "<group>"; };
+		CE170F3A28074E0400A18449 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		CE170F3C28074E2100A18449 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		CE170F3E280751C300A18449 /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
+		CE170F40280751D600A18449 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		CE170F432807599C00A18449 /* StocksListNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksListNavigator.swift; sourceTree = "<group>"; };
+		CE170F4B2807646100A18449 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		CE170F4F2807661900A18449 /* TagLabelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagLabelView.xib; sourceTree = "<group>"; };
+		CE170F51280766B000A18449 /* TagLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagLabelView.swift; sourceTree = "<group>"; };
 		CE5E3FA92806FA4D00C03FDB /* lloyds-technical-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lloyds-technical-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5E3FAC2806FA4D00C03FDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE5E3FAE2806FA4D00C03FDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +76,8 @@
 		CE5E3FB52806FA5100C03FDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE5E3FB82806FA5100C03FDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE5E3FBA2806FA5100C03FDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE5E3FC72806FD8600C03FDB /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		DEFF62CBBB19F6B72EB4FE0C /* Pods-lloyds-technical-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lloyds-technical-test.debug.xcconfig"; path = "Target Support Files/Pods-lloyds-technical-test/Pods-lloyds-technical-test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +85,101 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C624BF44B17044A96B191096 /* Pods_lloyds_technical_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A2BA537BF7BDD720BF89F85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE04C517133905612E827C29 /* Pods_lloyds_technical_test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE170F1B2807059F00A18449 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE170F1C280705A800A18449 /* Quote.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE170F222807214B00A18449 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE170F3428073DA500A18449 /* Cells */,
+				CE170F232807216A00A18449 /* MainTabBarViewController.swift */,
+				CE170F2D28073D6200A18449 /* StocksTableViewController.swift */,
+				CE170F2E28073D6200A18449 /* StocksTableViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE170F3128073D6A00A18449 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CE170F3228073D7F00A18449 /* StocksListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CE170F3428073DA500A18449 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CE170F3528073DC300A18449 /* StockQuoteTableViewCell.swift */,
+				CE170F3628073DC300A18449 /* StockQuoteTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CE170F3928074DEE00A18449 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CE170F1E28070F8300A18449 /* Navigator.swift */,
+				CE170F3E280751C300A18449 /* NibLoadableView.swift */,
+				CE170F40280751D600A18449 /* ReusableView.swift */,
+				CE170F3A28074E0400A18449 /* BasePresenter.swift */,
+				CE170F3C28074E2100A18449 /* BaseView.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CE170F422807598D00A18449 /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				CE170F432807599C00A18449 /* StocksListNavigator.swift */,
+			);
+			path = Navigator;
+			sourceTree = "<group>";
+		};
+		CE170F45280761D800A18449 /* Reusable Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE170F4F2807661900A18449 /* TagLabelView.xib */,
+				CE170F51280766B000A18449 /* TagLabelView.swift */,
+			);
+			path = "Reusable Views";
+			sourceTree = "<group>";
+		};
+		CE170F4A2807645200A18449 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE170F4B2807646100A18449 /* UIView+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CE5E3FA02806FA4D00C03FDB = {
 			isa = PBXGroup;
 			children = (
 				CE5E3FAB2806FA4D00C03FDB /* lloyds-technical-test */,
 				CE5E3FAA2806FA4D00C03FDB /* Products */,
+				E244DE7EDBFA3B80DD515F42 /* Pods */,
+				2A2BA537BF7BDD720BF89F85 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +194,11 @@
 		CE5E3FAB2806FA4D00C03FDB /* lloyds-technical-test */ = {
 			isa = PBXGroup;
 			children = (
+				CE170F3928074DEE00A18449 /* Protocols */,
+				CE5E3FC32806FAAB00C03FDB /* Api */,
+				CE5E3FC22806FAA200C03FDB /* Utils */,
+				CE5E3FC12806FA9B00C03FDB /* Resources */,
+				CE5E3FC02806FA9200C03FDB /* Modules */,
 				CE5E3FAC2806FA4D00C03FDB /* AppDelegate.swift */,
 				CE5E3FAE2806FA4D00C03FDB /* SceneDelegate.swift */,
 				CE5E3FB02806FA4D00C03FDB /* ViewController.swift */,
@@ -67,6 +210,82 @@
 			path = "lloyds-technical-test";
 			sourceTree = "<group>";
 		};
+		CE5E3FC02806FA9200C03FDB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CE5E3FC62806FB0700C03FDB /* News */,
+				CE5E3FC52806FB0100C03FDB /* Account */,
+				CE5E3FC42806FAF800C03FDB /* Stocks */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CE5E3FC12806FA9B00C03FDB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE5E3FC22806FAA200C03FDB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CE170F4A2807645200A18449 /* Extensions */,
+				CE170F45280761D800A18449 /* Reusable Views */,
+				CE170F15280702DC00A18449 /* AppEnvironement.swift */,
+				CE170F202807100F00A18449 /* APIResponseWrapper.swift */,
+				CE170F27280723A800A18449 /* AppNavigator.swift */,
+				CE170F292807306D00A18449 /* TabNavigator.swift */,
+				CE170F2B280730AC00A18449 /* TabBarPage.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CE5E3FC32806FAAB00C03FDB /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				CE5E3FC72806FD8600C03FDB /* Networking.swift */,
+				CE170F132807021300A18449 /* URLRequestBuilder.swift */,
+				CE170F172807032600A18449 /* Endpoint.swift */,
+				CE170F192807054500A18449 /* StocksService.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		CE5E3FC42806FAF800C03FDB /* Stocks */ = {
+			isa = PBXGroup;
+			children = (
+				CE170F422807598D00A18449 /* Navigator */,
+				CE170F3128073D6A00A18449 /* Presenter */,
+				CE170F222807214B00A18449 /* View */,
+				CE170F1B2807059F00A18449 /* Model */,
+			);
+			path = Stocks;
+			sourceTree = "<group>";
+		};
+		CE5E3FC52806FB0100C03FDB /* Account */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		CE5E3FC62806FB0700C03FDB /* News */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		E244DE7EDBFA3B80DD515F42 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DEFF62CBBB19F6B72EB4FE0C /* Pods-lloyds-technical-test.debug.xcconfig */,
+				2C215A5E7AAB639409ACDDB0 /* Pods-lloyds-technical-test.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +293,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE5E3FBD2806FA5100C03FDB /* Build configuration list for PBXNativeTarget "lloyds-technical-test" */;
 			buildPhases = (
+				F8DED16D4E7B7848982A91C3 /* [CP] Check Pods Manifest.lock */,
 				CE5E3FA52806FA4D00C03FDB /* Sources */,
 				CE5E3FA62806FA4D00C03FDB /* Frameworks */,
 				CE5E3FA72806FA4D00C03FDB /* Resources */,
+				36D779EC119A8FEB6EA6C3E4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,22 +346,89 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE170F3028073D6200A18449 /* StocksTableViewController.xib in Resources */,
+				CE170F3828073DC300A18449 /* StockQuoteTableViewCell.xib in Resources */,
 				CE5E3FB92806FA5100C03FDB /* LaunchScreen.storyboard in Resources */,
 				CE5E3FB62806FA5100C03FDB /* Assets.xcassets in Resources */,
+				CE170F502807661900A18449 /* TagLabelView.xib in Resources */,
 				CE5E3FB42806FA4D00C03FDB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		36D779EC119A8FEB6EA6C3E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-lloyds-technical-test/Pods-lloyds-technical-test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-lloyds-technical-test/Pods-lloyds-technical-test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-lloyds-technical-test/Pods-lloyds-technical-test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8DED16D4E7B7848982A91C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-lloyds-technical-test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE5E3FA52806FA4D00C03FDB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE170F52280766B000A18449 /* TagLabelView.swift in Sources */,
+				CE170F182807032600A18449 /* Endpoint.swift in Sources */,
+				CE170F1F28070F8300A18449 /* Navigator.swift in Sources */,
 				CE5E3FB12806FA4D00C03FDB /* ViewController.swift in Sources */,
+				CE170F3728073DC300A18449 /* StockQuoteTableViewCell.swift in Sources */,
+				CE170F3328073D7F00A18449 /* StocksListPresenter.swift in Sources */,
+				CE170F2C280730AC00A18449 /* TabBarPage.swift in Sources */,
+				CE170F16280702DC00A18449 /* AppEnvironement.swift in Sources */,
+				CE170F3D28074E2100A18449 /* BaseView.swift in Sources */,
+				CE170F142807021300A18449 /* URLRequestBuilder.swift in Sources */,
+				CE170F3F280751C300A18449 /* NibLoadableView.swift in Sources */,
+				CE170F2A2807306D00A18449 /* TabNavigator.swift in Sources */,
+				CE170F3B28074E0400A18449 /* BasePresenter.swift in Sources */,
+				CE170F212807100F00A18449 /* APIResponseWrapper.swift in Sources */,
+				CE170F2F28073D6200A18449 /* StocksTableViewController.swift in Sources */,
+				CE170F1D280705A800A18449 /* Quote.swift in Sources */,
+				CE170F41280751D600A18449 /* ReusableView.swift in Sources */,
 				CE5E3FAD2806FA4D00C03FDB /* AppDelegate.swift in Sources */,
+				CE170F442807599C00A18449 /* StocksListNavigator.swift in Sources */,
 				CE5E3FAF2806FA4D00C03FDB /* SceneDelegate.swift in Sources */,
+				CE170F28280723A800A18449 /* AppNavigator.swift in Sources */,
+				CE170F252807216A00A18449 /* MainTabBarViewController.swift in Sources */,
+				CE170F1A2807054500A18449 /* StocksService.swift in Sources */,
+				CE5E3FC82806FD8600C03FDB /* Networking.swift in Sources */,
+				CE170F4C2807646100A18449 /* UIView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +572,7 @@
 		};
 		CE5E3FBE2806FA5100C03FDB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEFF62CBBB19F6B72EB4FE0C /* Pods-lloyds-technical-test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -295,6 +584,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -312,6 +602,7 @@
 		};
 		CE5E3FBF2806FA5100C03FDB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C215A5E7AAB639409ACDDB0 /* Pods-lloyds-technical-test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -323,6 +614,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -11,9 +11,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let service = StocksService(network: AlamofireNetworking())
+        service.fetchLatestQuotes(symbols: ["AAPL"]) { result in
+            print(result)
+        }
     }
-
-
 }
 
