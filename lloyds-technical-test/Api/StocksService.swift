@@ -11,6 +11,7 @@ protocol StocksServiceProtocol {
     var network: NetworkingProtocol { get }
     
     func fetchLatestQuotes(symbols: [String], completion: @escaping (Result<[Quote], Error>) -> Void)
+    func fetchIntradayData(symbols: [String], completion: @escaping (Result<[IntradayModel], Error>) -> Void)
 }
 
 final class StocksService: StocksServiceProtocol {
@@ -26,6 +27,21 @@ final class StocksService: StocksServiceProtocol {
             case .success(let response):
                 if let quotes = response?.data {
                     completion(.success(quotes))
+                } else{
+                    completion(.failure(NSError()))
+                }
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func fetchIntradayData(symbols: [String], completion: @escaping (Result<[IntradayModel], Error>) -> Void) {
+        network.execute(.intradayData(symbols: symbols)) { (result: Result<APIResponseWrapper<[IntradayModel]>?, Error>) in
+            switch result {
+            case .success(let response):
+                if let intradayModel = response?.data {
+                    completion(.success(intradayModel))
                 } else{
                     completion(.failure(NSError()))
                 }

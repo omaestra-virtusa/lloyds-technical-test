@@ -32,6 +32,7 @@
 		CE170F4C2807646100A18449 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F4B2807646100A18449 /* UIView+.swift */; };
 		CE170F502807661900A18449 /* TagLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE170F4F2807661900A18449 /* TagLabelView.xib */; };
 		CE170F52280766B000A18449 /* TagLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F51280766B000A18449 /* TagLabelView.swift */; };
+		CE170F542807742900A18449 /* IntradayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F532807742900A18449 /* IntradayModel.swift */; };
 		CE5E3FAD2806FA4D00C03FDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E3FAC2806FA4D00C03FDB /* AppDelegate.swift */; };
 		CE5E3FAF2806FA4D00C03FDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E3FAE2806FA4D00C03FDB /* SceneDelegate.swift */; };
 		CE5E3FB12806FA4D00C03FDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E3FB02806FA4D00C03FDB /* ViewController.swift */; };
@@ -68,6 +69,7 @@
 		CE170F4B2807646100A18449 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		CE170F4F2807661900A18449 /* TagLabelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagLabelView.xib; sourceTree = "<group>"; };
 		CE170F51280766B000A18449 /* TagLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagLabelView.swift; sourceTree = "<group>"; };
+		CE170F532807742900A18449 /* IntradayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntradayModel.swift; sourceTree = "<group>"; };
 		CE5E3FA92806FA4D00C03FDB /* lloyds-technical-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lloyds-technical-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5E3FAC2806FA4D00C03FDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE5E3FAE2806FA4D00C03FDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				CE170F1C280705A800A18449 /* Quote.swift */,
+				CE170F532807742900A18449 /* IntradayModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				CE170F2F28073D6200A18449 /* StocksTableViewController.swift in Sources */,
 				CE170F1D280705A800A18449 /* Quote.swift in Sources */,
 				CE170F41280751D600A18449 /* ReusableView.swift in Sources */,
+				CE170F542807742900A18449 /* IntradayModel.swift in Sources */,
 				CE5E3FAD2806FA4D00C03FDB /* AppDelegate.swift in Sources */,
 				CE170F442807599C00A18449 /* StocksListNavigator.swift in Sources */,
 				CE5E3FAF2806FA4D00C03FDB /* SceneDelegate.swift in Sources */,

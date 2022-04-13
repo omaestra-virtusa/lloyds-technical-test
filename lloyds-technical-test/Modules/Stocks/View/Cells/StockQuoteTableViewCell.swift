@@ -6,24 +6,31 @@
 //
 
 import UIKit
+import DSFSparkline
 
 class StockQuoteTableViewCell: UITableViewCell, ReusableView, NibLoadableView {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var priceValueLabel: UILabel!
     @IBOutlet weak var dayChangeTagView: TagLabelView!
+    @IBOutlet weak var chartView: DSFSparklineLineGraphView!
     
     var quote: Quote?
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        chartView.graphColor = UIColor.systemBlue
+        chartView.showZeroLine = true
+        chartView.lineWidth = 0.3
+        chartView.backgroundColor = .clear
+        chartView.showsLargeContentViewer = false
     }
     
     func setupView(for quote: Quote) {
         titleLabel.text = quote.ticker
         subtitleLabel.text = quote.name
-        priceValueLabel.text = quote.price.description
+        priceValueLabel.text = "\(quote.currency) \(quote.price.description)"
         
         let operatorString = quote.dayChange > 0 ? "+" : "-"
         dayChangeTagView.valueLabel.text = "\(operatorString)\(quote.dayChange.description)"

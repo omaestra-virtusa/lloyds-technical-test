@@ -10,13 +10,17 @@ import Foundation
 protocol StocksListPresenterProtocol {
     var view: StocksViewProtocol? { get set }
     var quotes: [Quote]? { get }
+    var intradayData: [IntradayModel]? { get }
     var service: StocksServiceProtocol { get }
     
     func fetchQuotes(for symbols: [String])
+    func fetchIntradayData(for symbols: [String])
     func numberOfSectins() -> Int
     func numberOfRowsInSection(section: Int) -> Int
     func getQuotes() -> [Quote]?
     func getQuote(at indexPath: IndexPath) -> Quote?
+    func getIntradayData() -> [IntradayModel]?
+    func getIntradayModel(at indexPath: IndexPath) -> IntradayModel?
 }
 
 class StocksListPresenter: StocksListPresenterProtocol {
@@ -24,6 +28,7 @@ class StocksListPresenter: StocksListPresenterProtocol {
     
     internal var service: StocksServiceProtocol
     var quotes: [Quote]?
+    var intradayData: [IntradayModel]?
     
     init(service: StocksServiceProtocol) {
         self.service = service
@@ -43,6 +48,20 @@ class StocksListPresenter: StocksListPresenterProtocol {
         })
     }
     
+    func fetchIntradayData(for symbols: [String]) {
+        service.fetchIntradayData(symbols: symbols) { [weak self] result in
+            switch result {
+            case .success(let intradayData):
+                self?.intradayData = intradayData
+                self?.view?.updateView()
+            case .failure(let error):
+                self?.quotes = nil
+                self?.view?.displayError()
+                debugPrint(error)
+            }
+        }
+    }
+    
     func numberOfSectins() -> Int {
         return 1
     }
@@ -57,5 +76,13 @@ class StocksListPresenter: StocksListPresenterProtocol {
     
     func getQuote(at indexPath: IndexPath) -> Quote? {
         return quotes?[indexPath.row]
+    }
+    
+    func getIntradayData() -> [IntradayModel]? {
+        return intradayData
+    }
+    
+    func getIntradayModel(at indexPath: IndexPath) -> IntradayModel? {
+        return intradayData?[indexPath.row]
     }
 }

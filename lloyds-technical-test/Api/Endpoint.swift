@@ -10,6 +10,7 @@ import Alamofire
 
 enum Endpoint: URLRequestBuilder {
     case stockData(symbols: [String])
+    case intradayData(symbols: [String])
 }
 
 extension Endpoint {
@@ -17,6 +18,8 @@ extension Endpoint {
         switch self {
         case .stockData:
             return "v1/data/quote"
+        case .intradayData:
+            return "v1/data/intraday"
         }
     }
     
@@ -24,7 +27,7 @@ extension Endpoint {
     
     var method: HTTPMethod {
         switch self {
-        case .stockData:
+        case .stockData, .intradayData:
             return .get
         }
     }
@@ -38,12 +41,18 @@ extension Endpoint {
                 "api_token": AppEnvironment.authToken,
                 "symbols": symbols.joined(separator: ","),
             ]
+        case .intradayData(let symbols):
+            return [
+                "api_token": AppEnvironment.authToken,
+                "symbols": symbols.joined(separator: ","),
+                "interval": "day"
+            ]
         }
     }
     
     var encoding: URLEncoding {
         switch self {
-        case .stockData:
+        case .stockData, .intradayData:
             return .queryString
         }
     }

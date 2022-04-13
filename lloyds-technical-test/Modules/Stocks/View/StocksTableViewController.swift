@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DSFSparkline
 
 protocol StocksViewProtocol: AnyObject {
     func updateView()
@@ -19,9 +20,11 @@ class StocksTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupNavigationBar()
         setupTableView()
         
         presenter?.fetchQuotes(for: ["AAPL", "TSLA", "MSFT"])
+        presenter?.fetchIntradayData(for: ["AAPL"])
     }
     
     static func create() -> StocksTableViewController {
@@ -33,11 +36,17 @@ class StocksTableViewController: UITableViewController {
         return controller
     }
     
+    private func setupNavigationBar() {
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.title = "Stocks"
+    }
+    
     private func setupTableView() {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44.0
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.tableFooterView = UIView()
         
         let nib = UINib(nibName: StockQuoteTableViewCell.nibName, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: StockQuoteTableViewCell.reuseIdentifier)
@@ -61,6 +70,25 @@ class StocksTableViewController: UITableViewController {
         }
         
         cell.setupView(for: quote)
+        
+        // TODO: Separate chart creation logic
+        if let intradayData = presenter?.getIntradayData()?.filter({ $0.ticker == quote.ticker }) {
+            let data: [CGFloat] = intradayData.compactMap({
+                CGFloat($0.data.close)
+            })
+            
+            if !data.isEmpty {
+                let max = intradayData.max(by: { $0.data.close < $1.data.close }).map({ CGFloat($0.data.close) }) ?? 0.0
+                let min = intradayData.min(by: { $0.data.close < $1.data.close }).map({ CGFloat($0.data.close) }) ?? 0.0
+                
+                let sparklineDataSource = DSFSparkline.DataSource(values: data, range: min ... max)
+                cell.chartView.dataSource = sparklineDataSource
+                
+                DispatchQueue.main.async {
+                    sparklineDataSource.set(values: data)
+                }
+            }
+        }
 
         return cell
     }

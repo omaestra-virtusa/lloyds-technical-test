@@ -1,16 +1,30 @@
 PODS:
   - Alamofire (5.5.0)
+  - DSFSparkline (4.1.2):
+    - DSFSparkline/Core (= 4.1.2)
+  - DSFSparkline/Core (4.1.2)
 
 DEPENDENCIES:
   - Alamofire
+  - DSFSparkline (from `https://github.com/dagronf/DSFSparkline/`)
 
 SPEC REPOS:
   trunk:
     - Alamofire
 
+EXTERNAL SOURCES:
+  DSFSparkline:
+    :git: https://github.com/dagronf/DSFSparkline/
+
+CHECKOUT OPTIONS:
+  DSFSparkline:
+    :commit: 7847d7c2ada45f74af66618f77c489fd72eab122
+    :git: https://github.com/dagronf/DSFSparkline/
+
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  DSFSparkline: 5afb02975d7c9f4acc4a94fbdf774796124d6b67
 
-PODFILE CHECKSUM: 8a0eaa013d35d14f82d7f9e32041c33a891bdaf8
+PODFILE CHECKSUM: ba6e4ebd4cf489703856ad377ad5c8e2d034d596
 
 COCOAPODS: 1.11.3
