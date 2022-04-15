@@ -56,7 +56,7 @@ class StocksListNavigator: Navigator {
         case .quotesList:
             let viewController = StocksTableViewController.create()
             
-            let service = StocksService(network: MockNetworking())
+            let service = StocksService(network: AlamofireNetworking())
             let presenter = StocksListPresenter(service: service)
             presenter.view = viewController
             
@@ -65,7 +65,7 @@ class StocksListNavigator: Navigator {
             
             return viewController
         case .quoteDetails(let quote):
-            let service = StocksService(network: MockNetworking())
+            let service = StocksService(network: AlamofireNetworking())
             let viewController = StockDetailsViewController.create(quote: quote,
                                                                    service: service)
             viewController.navigator = self

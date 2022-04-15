@@ -39,7 +39,7 @@ final class NewsNavigator: Navigator {
     private func makeViewController(for destination: Destination) -> UIViewController {
         switch destination {
         case .newsList:
-            let service = NewsService(network: MockNetworking())
+            let service = NewsService(network: AlamofireNetworking())
             let presenter = NewsListPresenter(service: service)
             let viewController = NewsViewController.create(presenter: presenter)
             

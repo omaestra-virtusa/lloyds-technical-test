@@ -21,7 +21,7 @@ class StocksTableViewController: UITableViewController {
         
     static func create() -> StocksTableViewController {
         let controller = StocksTableViewController()
-        let presenter = StocksListPresenter(service: StocksService(network: MockNetworking()))
+        let presenter = StocksListPresenter(service: StocksService(network: AlamofireNetworking()))
         presenter.view = controller
         controller.presenter = presenter
         
@@ -88,7 +88,7 @@ class StocksTableViewController: UITableViewController {
         guard let quote = presenter?.getQuote(at: indexPath) else {
             return
         }
-        self.navigator?.navigate(to: .quoteDetails(quote: quote), navigationType: .push)
+        self.navigator?.navigate(to: .quoteDetails(quote: quote), navigationType: .overlay)
     }
     
     @objc func newsButtonTapped(_ sender: Any) {
