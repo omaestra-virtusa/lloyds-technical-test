@@ -66,10 +66,12 @@ extension Endpoint {
     
     var mockFileName: String? {
         switch self {
+        case .stockData:
+            return "mockQuotes"
+        case .intradayData:
+            return "mockIntraday"
         case .news:
             return "mockNews"
-        default:
-            return nil
         }
     }
 }

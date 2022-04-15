@@ -13,9 +13,13 @@ protocol NetworkingProtocol: AnyObject {
 }
 
 final class AlamofireNetworking: NetworkingProtocol {
+    var request: Alamofire.Request?
+    
     func execute<T>(_ endpoint: Endpoint, completion: @escaping (Result<T, APIError>) -> Void) where T : Decodable {
         let decoder = JSONDecoder()
-        AF.request(endpoint)
+        
+        request?.cancel()
+        request = AF.request(endpoint)
             .validate()
             .responseDecodable(of: T.self, decoder: decoder) { response in
                 switch response.result {

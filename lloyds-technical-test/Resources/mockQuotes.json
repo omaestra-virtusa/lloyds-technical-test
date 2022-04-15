@@ -1,0 +1,71 @@
+{
+    "meta": {
+        "requested": 3,
+        "returned": 3
+    },
+    "data": [
+        {
+            "ticker": "TSLA",
+            "name": "Tesla Inc",
+            "exchange_short": "NASDAQ",
+            "exchange_long": "NASDAQ Stock Exchange",
+            "mic_code": "XNAS",
+            "currency": "USD",
+            "price": 987.01,
+            "day_high": 1021,
+            "day_low": 976.83,
+            "day_open": 998.29,
+            "52_week_high": 1243.49,
+            "52_week_low": 546.98,
+            "market_cap": 991154405376,
+            "previous_close_price": 975.61,
+            "previous_close_price_time": "2022-04-11T16:00:00.000000",
+            "day_change": 1.16,
+            "volume": 487571,
+            "is_extended_hours_price": false,
+            "last_trade_time": "2022-04-12T15:59:59.000000"
+        },
+        {
+            "ticker": "AAPL",
+            "name": "Apple Inc",
+            "exchange_short": "NASDAQ",
+            "exchange_long": "NASDAQ Stock Exchange",
+            "mic_code": "XNAS",
+            "currency": "USD",
+            "price": 167.73,
+            "day_high": 169.87,
+            "day_low": 166.65,
+            "day_open": 168.04,
+            "52_week_high": 182.94,
+            "52_week_low": 122.25,
+            "market_cap": 2750697177088,
+            "previous_close_price": 165.79,
+            "previous_close_price_time": "2022-04-11T16:00:00.000000",
+            "day_change": 1.16,
+            "volume": 1402627,
+            "is_extended_hours_price": false,
+            "last_trade_time": "2022-04-12T15:59:59.000000"
+        },
+        {
+            "ticker": "V",
+            "name": "Visa Inc",
+            "exchange_short": "NYSE",
+            "exchange_long": "New York Stock Exchange",
+            "mic_code": "XNYS",
+            "currency": "USD",
+            "price": 211.38,
+            "day_high": 216.95,
+            "day_low": 210.75,
+            "day_open": 216.25,
+            "52_week_high": 252.67,
+            "52_week_low": 186.67,
+            "market_cap": null,
+            "previous_close_price": 214.78,
+            "previous_close_price_time": "2022-04-11T15:59:59.000000",
+            "day_change": -1.61,
+            "volume": 346367,
+            "is_extended_hours_price": false,
+            "last_trade_time": "2022-04-12T15:59:59.000000"
+        }
+    ]
+}

@@ -13,6 +13,7 @@ protocol NewsListPresenterProtocol: AnyObject {
     var newsList: [News]? { get }
     var service: NewsServiceProtocol { get }
     func fetchNews()
+    func getNews(at indexPath: IndexPath) -> News?
     func numberOfSectins() -> Int
     func numberOfRowsInSection(section: Int) -> Int
 }
@@ -35,10 +36,13 @@ class NewsListPresenter: NewsListPresenterProtocol {
                 self?.view?.updateView()
             case .failure(let error):
                 self?.newsList = nil
-//                self?.view?.displayError(title: error.code?.rawValue, description: error.message)
                 debugPrint(error)
             }
         }
+    }
+    
+    func getNews(at indexPath: IndexPath) -> News? {
+        return newsList?[indexPath.row]
     }
     
     func numberOfSectins() -> Int {

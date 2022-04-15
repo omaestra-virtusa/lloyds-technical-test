@@ -15,10 +15,6 @@
 		CE170F1D280705A800A18449 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F1C280705A800A18449 /* Quote.swift */; };
 		CE170F1F28070F8300A18449 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F1E28070F8300A18449 /* Navigator.swift */; };
 		CE170F212807100F00A18449 /* APIResponseWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F202807100F00A18449 /* APIResponseWrapper.swift */; };
-		CE170F252807216A00A18449 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F232807216A00A18449 /* MainTabBarViewController.swift */; };
-		CE170F28280723A800A18449 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F27280723A800A18449 /* AppNavigator.swift */; };
-		CE170F2A2807306D00A18449 /* TabNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F292807306D00A18449 /* TabNavigator.swift */; };
-		CE170F2C280730AC00A18449 /* TabBarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F2B280730AC00A18449 /* TabBarPage.swift */; };
 		CE170F2F28073D6200A18449 /* StocksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F2D28073D6200A18449 /* StocksTableViewController.swift */; };
 		CE170F3028073D6200A18449 /* StocksTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE170F2E28073D6200A18449 /* StocksTableViewController.xib */; };
 		CE170F3328073D7F00A18449 /* StocksListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F3228073D7F00A18449 /* StocksListPresenter.swift */; };
@@ -52,6 +48,13 @@
 		CE170F802809076D00A18449 /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F7F2809076D00A18449 /* NewsService.swift */; };
 		CE170F8328090DEF00A18449 /* NewsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F8228090DEF00A18449 /* NewsNavigator.swift */; };
 		CE170F8528090FAF00A18449 /* mockNews.json in Resources */ = {isa = PBXBuildFile; fileRef = CE170F8428090FAF00A18449 /* mockNews.json */; };
+		CE170F87280973DF00A18449 /* mockQuotes.json in Resources */ = {isa = PBXBuildFile; fileRef = CE170F86280973DE00A18449 /* mockQuotes.json */; };
+		CE170F8928098C3200A18449 /* NumberShortener.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F8828098C3100A18449 /* NumberShortener.swift */; };
+		CE170F912809C15E00A18449 /* lloyds_technical_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F902809C15E00A18449 /* lloyds_technical_testTests.swift */; };
+		CE170F9B2809C1B400A18449 /* StocksListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F9A2809C1B400A18449 /* StocksListPresenterTests.swift */; };
+		CE170F9D2809CBC200A18449 /* MockedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F9C2809CBC200A18449 /* MockedNavigationController.swift */; };
+		CE170F9F2809D14600A18449 /* StocksListNavigatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F9E2809D14600A18449 /* StocksListNavigatorTests.swift */; };
+		CE170FA32809D47C00A18449 /* mockIntraday.json in Resources */ = {isa = PBXBuildFile; fileRef = CE170FA22809D47C00A18449 /* mockIntraday.json */; };
 		CE5E3FAD2806FA4D00C03FDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E3FAC2806FA4D00C03FDB /* AppDelegate.swift */; };
 		CE5E3FAF2806FA4D00C03FDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E3FAE2806FA4D00C03FDB /* SceneDelegate.swift */; };
 		CE5E3FB42806FA4D00C03FDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5E3FB22806FA4D00C03FDB /* Main.storyboard */; };
@@ -59,6 +62,16 @@
 		CE5E3FB92806FA5100C03FDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5E3FB72806FA5100C03FDB /* LaunchScreen.storyboard */; };
 		CE5E3FC82806FD8600C03FDB /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E3FC72806FD8600C03FDB /* Networking.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE170F922809C15E00A18449 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE5E3FA12806FA4D00C03FDB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE5E3FA82806FA4D00C03FDB;
+			remoteInfo = "lloyds-technical-test";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2C215A5E7AAB639409ACDDB0 /* Pods-lloyds-technical-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lloyds-technical-test.release.xcconfig"; path = "Target Support Files/Pods-lloyds-technical-test/Pods-lloyds-technical-test.release.xcconfig"; sourceTree = "<group>"; };
@@ -70,10 +83,6 @@
 		CE170F1C280705A800A18449 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		CE170F1E28070F8300A18449 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		CE170F202807100F00A18449 /* APIResponseWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseWrapper.swift; sourceTree = "<group>"; };
-		CE170F232807216A00A18449 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
-		CE170F27280723A800A18449 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
-		CE170F292807306D00A18449 /* TabNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigator.swift; sourceTree = "<group>"; };
-		CE170F2B280730AC00A18449 /* TabBarPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPage.swift; sourceTree = "<group>"; };
 		CE170F2D28073D6200A18449 /* StocksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksTableViewController.swift; sourceTree = "<group>"; };
 		CE170F2E28073D6200A18449 /* StocksTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StocksTableViewController.xib; sourceTree = "<group>"; };
 		CE170F3228073D7F00A18449 /* StocksListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksListPresenter.swift; sourceTree = "<group>"; };
@@ -107,6 +116,14 @@
 		CE170F7F2809076D00A18449 /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
 		CE170F8228090DEF00A18449 /* NewsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsNavigator.swift; sourceTree = "<group>"; };
 		CE170F8428090FAF00A18449 /* mockNews.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mockNews.json; sourceTree = "<group>"; };
+		CE170F86280973DE00A18449 /* mockQuotes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mockQuotes.json; sourceTree = "<group>"; };
+		CE170F8828098C3100A18449 /* NumberShortener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberShortener.swift; sourceTree = "<group>"; };
+		CE170F8E2809C15E00A18449 /* lloyds-technical-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "lloyds-technical-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE170F902809C15E00A18449 /* lloyds_technical_testTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lloyds_technical_testTests.swift; sourceTree = "<group>"; };
+		CE170F9A2809C1B400A18449 /* StocksListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksListPresenterTests.swift; sourceTree = "<group>"; };
+		CE170F9C2809CBC200A18449 /* MockedNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedNavigationController.swift; sourceTree = "<group>"; };
+		CE170F9E2809D14600A18449 /* StocksListNavigatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksListNavigatorTests.swift; sourceTree = "<group>"; };
+		CE170FA22809D47C00A18449 /* mockIntraday.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mockIntraday.json; sourceTree = "<group>"; };
 		CE5E3FA92806FA4D00C03FDB /* lloyds-technical-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lloyds-technical-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5E3FAC2806FA4D00C03FDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE5E3FAE2806FA4D00C03FDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +136,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CE170F8B2809C15E00A18449 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE5E3FA62806FA4D00C03FDB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -151,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				CE170F3428073DA500A18449 /* Cells */,
-				CE170F232807216A00A18449 /* MainTabBarViewController.swift */,
 				CE170F2D28073D6200A18449 /* StocksTableViewController.swift */,
 				CE170F2E28073D6200A18449 /* StocksTableViewController.xib */,
 				CE170F55280884AF00A18449 /* StockDetailsViewController.swift */,
@@ -263,10 +286,38 @@
 			path = Navigator;
 			sourceTree = "<group>";
 		};
+		CE170F8F2809C15E00A18449 /* lloyds-technical-testTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE170F972809C18F00A18449 /* Modules */,
+				CE170F902809C15E00A18449 /* lloyds_technical_testTests.swift */,
+				CE170F9C2809CBC200A18449 /* MockedNavigationController.swift */,
+			);
+			path = "lloyds-technical-testTests";
+			sourceTree = "<group>";
+		};
+		CE170F972809C18F00A18449 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CE170F982809C19500A18449 /* Stocks */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CE170F982809C19500A18449 /* Stocks */ = {
+			isa = PBXGroup;
+			children = (
+				CE170F9A2809C1B400A18449 /* StocksListPresenterTests.swift */,
+				CE170F9E2809D14600A18449 /* StocksListNavigatorTests.swift */,
+			);
+			path = Stocks;
+			sourceTree = "<group>";
+		};
 		CE5E3FA02806FA4D00C03FDB = {
 			isa = PBXGroup;
 			children = (
 				CE5E3FAB2806FA4D00C03FDB /* lloyds-technical-test */,
+				CE170F8F2809C15E00A18449 /* lloyds-technical-testTests */,
 				CE5E3FAA2806FA4D00C03FDB /* Products */,
 				E244DE7EDBFA3B80DD515F42 /* Pods */,
 				2A2BA537BF7BDD720BF89F85 /* Frameworks */,
@@ -277,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				CE5E3FA92806FA4D00C03FDB /* lloyds-technical-test.app */,
+				CE170F8E2809C15E00A18449 /* lloyds-technical-testTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -312,6 +364,8 @@
 			isa = PBXGroup;
 			children = (
 				CE170F8428090FAF00A18449 /* mockNews.json */,
+				CE170F86280973DE00A18449 /* mockQuotes.json */,
+				CE170FA22809D47C00A18449 /* mockIntraday.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -323,10 +377,8 @@
 				CE170F45280761D800A18449 /* Reusable Views */,
 				CE170F15280702DC00A18449 /* AppEnvironement.swift */,
 				CE170F202807100F00A18449 /* APIResponseWrapper.swift */,
-				CE170F27280723A800A18449 /* AppNavigator.swift */,
-				CE170F292807306D00A18449 /* TabNavigator.swift */,
-				CE170F2B280730AC00A18449 /* TabBarPage.swift */,
 				CE170F612808D1EF00A18449 /* Constants.swift */,
+				CE170F8828098C3100A18449 /* NumberShortener.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -378,6 +430,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CE170F8D2809C15E00A18449 /* lloyds-technical-testTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE170F942809C15E00A18449 /* Build configuration list for PBXNativeTarget "lloyds-technical-testTests" */;
+			buildPhases = (
+				CE170F8A2809C15E00A18449 /* Sources */,
+				CE170F8B2809C15E00A18449 /* Frameworks */,
+				CE170F8C2809C15E00A18449 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE170F932809C15E00A18449 /* PBXTargetDependency */,
+			);
+			name = "lloyds-technical-testTests";
+			productName = "lloyds-technical-testTests";
+			productReference = CE170F8E2809C15E00A18449 /* lloyds-technical-testTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CE5E3FA82806FA4D00C03FDB /* lloyds-technical-test */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE5E3FBD2806FA5100C03FDB /* Build configuration list for PBXNativeTarget "lloyds-technical-test" */;
@@ -407,6 +477,10 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					CE170F8D2809C15E00A18449 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = CE5E3FA82806FA4D00C03FDB;
+					};
 					CE5E3FA82806FA4D00C03FDB = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -426,20 +500,30 @@
 			projectRoot = "";
 			targets = (
 				CE5E3FA82806FA4D00C03FDB /* lloyds-technical-test */,
+				CE170F8D2809C15E00A18449 /* lloyds-technical-testTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CE170F8C2809C15E00A18449 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE5E3FA72806FA4D00C03FDB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CE170F3028073D6200A18449 /* StocksTableViewController.xib in Resources */,
+				CE170FA32809D47C00A18449 /* mockIntraday.json in Resources */,
 				CE170F662808D26700A18449 /* DateIntervalsCollectionViewCell.xib in Resources */,
 				CE170F3828073DC300A18449 /* StockQuoteTableViewCell.xib in Resources */,
 				CE5E3FB92806FA5100C03FDB /* LaunchScreen.storyboard in Resources */,
 				CE170F8528090FAF00A18449 /* mockNews.json in Resources */,
+				CE170F87280973DF00A18449 /* mockQuotes.json in Resources */,
 				CE5E3FB62806FA5100C03FDB /* Assets.xcassets in Resources */,
 				CE170F502807661900A18449 /* TagLabelView.xib in Resources */,
 				CE170F6E2808ECD600A18449 /* ErrorView.xib in Resources */,
@@ -495,6 +579,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CE170F8A2809C15E00A18449 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE170F9D2809CBC200A18449 /* MockedNavigationController.swift in Sources */,
+				CE170F912809C15E00A18449 /* lloyds_technical_testTests.swift in Sources */,
+				CE170F9F2809D14600A18449 /* StocksListNavigatorTests.swift in Sources */,
+				CE170F9B2809C1B400A18449 /* StocksListPresenterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE5E3FA52806FA4D00C03FDB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -508,14 +603,13 @@
 				CE170F622808D1EF00A18449 /* Constants.swift in Sources */,
 				CE170F3728073DC300A18449 /* StockQuoteTableViewCell.swift in Sources */,
 				CE170F3328073D7F00A18449 /* StocksListPresenter.swift in Sources */,
-				CE170F2C280730AC00A18449 /* TabBarPage.swift in Sources */,
 				CE170F16280702DC00A18449 /* AppEnvironement.swift in Sources */,
 				CE170F6C2808ECCB00A18449 /* ErrorView.swift in Sources */,
+				CE170F8928098C3200A18449 /* NumberShortener.swift in Sources */,
 				CE170F3D28074E2100A18449 /* BaseView.swift in Sources */,
 				CE170F142807021300A18449 /* URLRequestBuilder.swift in Sources */,
 				CE170F3F280751C300A18449 /* NibLoadableView.swift in Sources */,
 				CE170F6A2808DDD600A18449 /* APIError.swift in Sources */,
-				CE170F2A2807306D00A18449 /* TabNavigator.swift in Sources */,
 				CE170F3B28074E0400A18449 /* BasePresenter.swift in Sources */,
 				CE170F212807100F00A18449 /* APIResponseWrapper.swift in Sources */,
 				CE170F2F28073D6200A18449 /* StocksTableViewController.swift in Sources */,
@@ -530,10 +624,8 @@
 				CE170F442807599C00A18449 /* StocksListNavigator.swift in Sources */,
 				CE5E3FAF2806FA4D00C03FDB /* SceneDelegate.swift in Sources */,
 				CE170F682808D55C00A18449 /* DateIntervalsCollectionView.swift in Sources */,
-				CE170F28280723A800A18449 /* AppNavigator.swift in Sources */,
 				CE170F7C2809055900A18449 /* News.swift in Sources */,
 				CE170F742809017E00A18449 /* NewsViewController.swift in Sources */,
-				CE170F252807216A00A18449 /* MainTabBarViewController.swift in Sources */,
 				CE170F1A2807054500A18449 /* StocksService.swift in Sources */,
 				CE5E3FC82806FD8600C03FDB /* Networking.swift in Sources */,
 				CE170F4C2807646100A18449 /* UIView+.swift in Sources */,
@@ -541,6 +633,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE170F932809C15E00A18449 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE5E3FA82806FA4D00C03FDB /* lloyds-technical-test */;
+			targetProxy = CE170F922809C15E00A18449 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CE5E3FB22806FA4D00C03FDB /* Main.storyboard */ = {
@@ -562,6 +662,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CE170F952809C15E00A18449 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 443UPVR94K;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "omaestra.lloyds-technical-testTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lloyds-technical-test.app/lloyds-technical-test";
+			};
+			name = Debug;
+		};
+		CE170F962809C15E00A18449 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 443UPVR94K;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "omaestra.lloyds-technical-testTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lloyds-technical-test.app/lloyds-technical-test";
+			};
+			name = Release;
+		};
 		CE5E3FBB2806FA5100C03FDB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -691,7 +827,6 @@
 				INFOPLIST_FILE = "lloyds-technical-test/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -721,7 +856,6 @@
 				INFOPLIST_FILE = "lloyds-technical-test/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -741,6 +875,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CE170F942809C15E00A18449 /* Build configuration list for PBXNativeTarget "lloyds-technical-testTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE170F952809C15E00A18449 /* Debug */,
+				CE170F962809C15E00A18449 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CE5E3FA42806FA4D00C03FDB /* Build configuration list for PBXProject "lloyds-technical-test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -9,6 +9,8 @@ import UIKit
 import DSFSparkline
 
 protocol StocksViewProtocol: AnyObject {
+    var navigator: StocksListNavigator? { get set }
+    
     func updateView()
     func displayError(title: String?, description: String?)
 }
@@ -17,12 +19,11 @@ class StocksTableViewController: UITableViewController {
     var presenter: StocksListPresenterProtocol?
     var navigator: StocksListNavigator?
         
-    static func create(navigator: StocksListNavigator) -> StocksTableViewController {
+    static func create() -> StocksTableViewController {
         let controller = StocksTableViewController()
-        let presenter = StocksListPresenter(service: StocksService(network: AlamofireNetworking()))
+        let presenter = StocksListPresenter(service: StocksService(network: MockNetworking()))
         presenter.view = controller
         controller.presenter = presenter
-        controller.navigator = navigator
         
         return controller
     }
@@ -35,7 +36,6 @@ class StocksTableViewController: UITableViewController {
         setupRefreshControl()
         
         presenter?.fetchQuotes(for: Constants.initialSymbols)
-//        presenter?.fetchIntradayData(for: ["AAPL"], interval: .day)
     }
     
     private func setupNavigationBar() {
@@ -80,22 +80,6 @@ class StocksTableViewController: UITableViewController {
         }
         
         cell.setupView(for: quote)
-        
-        // TODO: Separate chart creation logic
-        if let intradayData = presenter?.getIntradayData()?.filter({ $0.ticker == quote.ticker }) {
-            let data: [CGFloat] = intradayData.compactMap({
-                CGFloat($0.data.close)
-            })
-
-            if !data.isEmpty {
-                let sparklineDataSource = DSFSparkline.DataSource(windowSize: 30, range: nil, zeroLineValue: 0)
-                cell.chartView.dataSource = sparklineDataSource
-
-                DispatchQueue.main.async {
-                    sparklineDataSource.set(values: data)
-                }
-            }
-        }
 
         return cell
     }
@@ -104,11 +88,11 @@ class StocksTableViewController: UITableViewController {
         guard let quote = presenter?.getQuote(at: indexPath) else {
             return
         }
-        self.navigator?.navigate(to: .quoteDetails(quote: quote), navigationType: .overlay)
+        self.navigator?.navigate(to: .quoteDetails(quote: quote), navigationType: .push)
     }
     
     @objc func newsButtonTapped(_ sender: Any) {
-        navigator?.navigate(to: .news, navigationType: .overlay)
+        navigator?.navigateToNews()
     }
     
     @objc func didPullToRefresh(_ sender: Any) {

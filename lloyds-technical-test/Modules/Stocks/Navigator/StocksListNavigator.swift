@@ -8,14 +8,17 @@
 import Foundation
 import UIKit
 
-final class StocksListNavigator: Navigator {
+class StocksListNavigator: Navigator {
+    typealias Children = NewsNavigator
+    
     enum Destination {
         case quotesList
         case quoteDetails(quote: Quote)
         case news
     }
     
-    internal weak var navigationController: UINavigationController?
+    var children: [NewsNavigator]
+    var navigationController: UINavigationController?
 
     var rootViewController: UIViewController? {
         return navigationController
@@ -23,6 +26,7 @@ final class StocksListNavigator: Navigator {
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+        children = [NewsNavigator(navigationController: navigationController)]
     }
     
     // MARK: - Navigator
@@ -39,28 +43,36 @@ final class StocksListNavigator: Navigator {
         }
     }
     
+    func navigateToNews() {
+        if let childNavigator = children.last {
+            childNavigator.navigate(to: .newsList, navigationType: .overlay)
+        }
+    }
+    
     // MARK: - Private
     
     private func makeViewController(for destination: Destination) -> UIViewController {
         switch destination {
         case .quotesList:
-            let viewController = StocksTableViewController.create(navigator: self)
+            let viewController = StocksTableViewController.create()
+            
+            let service = StocksService(network: MockNetworking())
+            let presenter = StocksListPresenter(service: service)
+            presenter.view = viewController
+            
+            viewController.navigator = self
+            viewController.presenter = presenter
             
             return viewController
         case .quoteDetails(let quote):
-            let service = StocksService(network: AlamofireNetworking())
+            let service = StocksService(network: MockNetworking())
             let viewController = StockDetailsViewController.create(quote: quote,
-                                                                   navigator: self,
                                                                    service: service)
+            viewController.navigator = self
             
             return viewController
-            
-        case .news:
-            let service = NewsService(network: MockNetworking())
-            let presenter = NewsListPresenter(service: service)
-            let viewController = NewsViewController.create(presenter: presenter)
-            
-            return viewController
+        default:
+            return UIViewController()
         }
     }
 }

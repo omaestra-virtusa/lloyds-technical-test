@@ -9,6 +9,7 @@ import UIKit
 import DSFSparkline
 
 protocol StockDetailsViewProtocol: AnyObject {
+    var navigator: StocksListNavigator? { get set }
     func updateView()
 }
 
@@ -33,26 +34,27 @@ class StockDetailsViewController: UIViewController {
     @IBOutlet weak private var weekHighValueLabel: UILabel!
     @IBOutlet weak private var weekLowValueLabel: UILabel!
     @IBOutlet weak private var averageVolumeValueLabel: UILabel!
+    @IBOutlet weak var closeButton: UIButton!
     
     lazy var chartView: DSFSparklineLineGraphView = {
         let chartView = DSFSparklineLineGraphView()
-        chartView.graphColor = UIColor.systemIndigo
+        chartView.graphColor = .systemIndigo
         chartView.showZeroLine = true
+        chartView.backgroundColor = .systemGray6
+        chartView.interpolated = true
         
         return chartView
     }()
     
     var presenter: StockDetailsPresenterProtocol?
-    weak private var navigator: StocksListNavigator?
+    weak var navigator: StocksListNavigator?
     
     static func create(quote: Quote,
-                       navigator: StocksListNavigator,
                        service: StocksServiceProtocol) -> StockDetailsViewController {
         let controller = StockDetailsViewController()
-        let presenter =   StockDetailsPresenter(service: service, quote: quote)
+        let presenter = StockDetailsPresenter(service: service, quote: quote)
         presenter.view = controller
         controller.presenter = presenter
-        controller.navigator = navigator
         
         return controller
     }
@@ -82,7 +84,9 @@ class StockDetailsViewController: UIViewController {
         lowValueLabel.text = quote.dayLow.description
         volumeValueLabel.text = quote.volume.description
         peValueLabel.text = quote.previousClosePrice.description
-        marketCapValueLabel.text = quote.marketCap.description
+        let shortener = NumberShortener()
+        let marketCapShorten = shortener.shorten(from: quote.marketCap?.description ?? "-")
+        marketCapValueLabel.text = marketCapShorten ?? "-"
         weekHighValueLabel.text = quote.weekHigh.description
         weekLowValueLabel.text = quote.weekLow.description
         averageVolumeValueLabel.text = "-"
@@ -95,22 +99,26 @@ class StockDetailsViewController: UIViewController {
             })
 
             if !data.isEmpty {
-                chartView.fixedLayout(in: self.chartViewContainer)
-
                 let sparklineDataSource = DSFSparkline.DataSource(windowSize: 30, range: nil, zeroLineValue: 0)
                 chartView.dataSource = sparklineDataSource
 
                 DispatchQueue.main.async {
+                    self.chartView.fixedLayout(in: self.chartViewContainer)
                     sparklineDataSource.set(values: data)
                 }
             }
         }
+    }
+    
+    @IBAction func closeButttonDidPress(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
 extension StockDetailsViewController: StockDetailsViewProtocol {
     func updateView() {
         self.removeSpinner()
+        self.closeButton.isHidden = self.isModalInPresentation ? true : false
         guard let quote = presenter?.quote else {
             return
         }

@@ -17,10 +17,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 
         self.window = UIWindow(windowScene: windowScene)
         
-        let navigatorController = UINavigationController()
-        let navigator = StocksListNavigator(navigationController: navigatorController)
+        let navigator = StocksListNavigator(navigationController: UINavigationController())
         
-        window?.rootViewController = navigatorController
+        window?.rootViewController = navigator.navigationController
         window?.makeKeyAndVisible()
         
         navigator.navigate(to: .quotesList)

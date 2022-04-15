@@ -10,10 +10,11 @@ import UIKit
 
 protocol Navigator {
     associatedtype Destination
+    associatedtype Children = Navigator
     
 //    var finishDelegate: NavigatorFinishDelegate? { get set }
     var navigationController: UINavigationController? { get set }
-//    var childNavigators: [Navigator] { get set }
+    var children: [Children] { get set }
 //    var type: NavigationType { get }
 //    func start()
 //    func finish()
@@ -25,7 +26,7 @@ protocol Navigator {
 
 extension Navigator {
 //    func finish() {
-//        childNavigators.removeAll()
+//        children.removeAll()
 //        finishDelegate?.navigatorDidFinish(childNavigator: self)
 //    }
     

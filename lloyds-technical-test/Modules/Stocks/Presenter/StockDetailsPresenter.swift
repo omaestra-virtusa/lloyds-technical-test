@@ -27,7 +27,7 @@ class StockDetailsPresenter: StockDetailsPresenterProtocol {
     
     internal var service: StocksServiceProtocol
     private(set) var quote: Quote?
-    var intradayData: [IntradayModel]?
+    private(set) var intradayData: [IntradayModel]?
     
     init(service: StocksServiceProtocol, quote: Quote) {
         self.service = service

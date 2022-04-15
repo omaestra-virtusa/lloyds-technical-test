@@ -12,7 +12,7 @@ protocol DateIntervalsCollectionViewDelegate: AnyObject {
 }
 
 class DateIntervalsCollectionView: UIView, NibLoadableView {
-    var delegate: DateIntervalsCollectionViewDelegate?
+    weak var delegate: DateIntervalsCollectionViewDelegate?
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -65,6 +65,10 @@ extension DateIntervalsCollectionView: UICollectionViewDataSource, UICollectionV
         cell.valueLabel.text = value.rawValue
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        return !(collectionView.indexPathsForSelectedItems?.contains(indexPath) ?? true)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

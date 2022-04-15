@@ -12,13 +12,11 @@ final class NewsNavigator: Navigator {
         case newsList
     }
     
-    internal weak var navigationController: UINavigationController?
-
-    var rootViewController: UIViewController? {
-        return navigationController
-    }
+    var children: [NewsNavigator]
+    weak var navigationController: UINavigationController?
     
     init(navigationController: UINavigationController) {
+        children = []
         self.navigationController = navigationController
     }
     

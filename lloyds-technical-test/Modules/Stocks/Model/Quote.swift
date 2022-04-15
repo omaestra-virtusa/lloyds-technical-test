@@ -20,7 +20,7 @@ struct Quote: Decodable {
     var dayOpen: Double
     var weekHigh: Double
     var weekLow: Double
-    var marketCap: Double
+    var marketCap: Double?
     var previousClosePrice: Double
     var previousClosePriceTime: String
     var dayChange: Double
@@ -61,7 +61,7 @@ struct Quote: Decodable {
         dayOpen = try container.decode(Double.self, forKey: .dayOpen)
         weekHigh = try container.decode(Double.self, forKey: .weekHigh)
         weekLow = try container.decode(Double.self, forKey: .weekLow)
-        marketCap = try container.decode(Double.self, forKey: .marketCap)
+        marketCap = try container.decodeIfPresent(Double.self, forKey: .marketCap)
         previousClosePrice = try container.decode(Double.self, forKey: .previousClosePrice)
         previousClosePriceTime = try container.decode(String.self, forKey: .previousClosePriceTime)
         dayChange = try container.decode(Double.self, forKey: .dayChange)
