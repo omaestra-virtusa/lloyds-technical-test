@@ -8,8 +8,18 @@
 import Foundation
 
 enum Constants {
-    enum DateInterval: String {
+    enum DateInterval: String, CustomStringConvertible {
         case day, week, month, quarter, year
+        
+        var description: String {
+            switch self {
+            case .day: return "1D"
+            case .week: return "1W"
+            case .month: return "1M"
+            case .quarter: return "1Q"
+            case .year: return "1Y"
+            }
+        }
     }
     
     static var dateIntervals: [DateInterval] {

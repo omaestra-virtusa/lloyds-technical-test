@@ -63,11 +63,19 @@ class StockDetailsViewController: UIViewController {
         super.viewDidLoad()
         
         setupCollectionView()
+        setupNavigationBar()
         self.showSpinner(onView: chartViewContainer)
         presenter?.fetchIntradayData(for: [presenter?.quote?.ticker ?? ""], interval: .day)
         updateView()
     }
 
+    private func setupNavigationBar() {
+        let imageView = UIImageView(image: UIImage(named: "lloyds_image"))
+        let item = UIBarButtonItem(customView: imageView)
+        item.isEnabled = false
+        self.navigationItem.rightBarButtonItem = item
+    }
+    
     private func setupCollectionView() {
         dateIntervalCollectionView.collectionView.allowsMultipleSelection = false
         dateIntervalCollectionView.collectionView.selectItem(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: .left)
@@ -78,6 +86,7 @@ class StockDetailsViewController: UIViewController {
         nameLabel.text = quote.name
         priceValueLabel.text = quote.price.description
         dayChangeValueLabel.text = quote.dayChange.description
+        dayChangeValueLabel.textColor = quote.dayChange > 0 ? .systemGreen : .systemRed
         currencyValueLabel.text = quote.currency
         openValueLabel.text = quote.dayOpen.description
         highValueLabel.text = quote.dayHigh.description

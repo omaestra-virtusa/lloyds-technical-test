@@ -19,14 +19,31 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <viewLayoutGuide key="safeArea" id="vLr-E1-eTs"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <view key="tableFooterView" contentMode="scaleToFill" id="5DK-OD-jdG">
+                <rect key="frame" x="0.0" y="858" width="414" height="95"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lloyds_image" translatesAutoresizingMaskIntoConstraints="NO" id="Zxp-gb-EGl">
+                        <rect key="frame" x="138.5" y="8" width="137" height="79"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="Zxp-gb-EGl" firstAttribute="width" secondItem="5DK-OD-jdG" secondAttribute="width" multiplier="0.33" id="fwP-vd-7PS"/>
+                    <constraint firstItem="Zxp-gb-EGl" firstAttribute="top" secondItem="5DK-OD-jdG" secondAttribute="top" constant="8" id="gC6-mg-94S"/>
+                    <constraint firstAttribute="bottom" secondItem="Zxp-gb-EGl" secondAttribute="bottom" constant="8" id="s3x-ro-4ln"/>
+                    <constraint firstItem="Zxp-gb-EGl" firstAttribute="centerX" secondItem="5DK-OD-jdG" secondAttribute="centerX" id="w4r-I2-Pnh"/>
+                </constraints>
+            </view>
             <connections>
                 <outlet property="dataSource" destination="-1" id="Tng-2m-Rnh"/>
                 <outlet property="delegate" destination="-1" id="9aC-8N-iBw"/>
             </connections>
-            <point key="canvasLocation" x="139" y="148"/>
+            <point key="canvasLocation" x="214.49275362318843" y="223.66071428571428"/>
         </tableView>
     </objects>
     <resources>
+        <image name="lloyds_image" width="800" height="800"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

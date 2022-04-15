@@ -53,7 +53,7 @@ extension DateIntervalsCollectionView: UICollectionViewDataSource, UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 50, height: 30)
+        return CGSize(width: 40, height: 30)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -62,7 +62,7 @@ extension DateIntervalsCollectionView: UICollectionViewDataSource, UICollectionV
         }
         
         let value = Constants.dateIntervals[indexPath.row]
-        cell.valueLabel.text = value.rawValue
+        cell.valueLabel.text = value.description
         
         return cell
     }

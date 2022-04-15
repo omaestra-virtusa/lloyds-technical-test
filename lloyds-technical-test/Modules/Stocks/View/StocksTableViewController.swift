@@ -49,7 +49,6 @@ class StocksTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 44.0
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.tableFooterView = UIView()
         
         let nib = UINib(nibName: StockQuoteTableViewCell.nibName, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: StockQuoteTableViewCell.reuseIdentifier)
