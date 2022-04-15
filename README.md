@@ -2,7 +2,7 @@
 
 # iOS Tech Test
 
-For this technical test I have implemented an iOS application written in Swift using MVP as architecture pattern for clear separation of concerns.
+For this technical test I have implemented an iOS application written in Swift using MVP+Coordinator as architecture pattern for clear separation of concerns.
 I have chosen this pattern due to time and scope restrictions.
 
 Regarding the application, it is a simple Stock Market app which retrieves the data from a public API (https://www.stockdata.org/) and displays the information on a simplified manner. The app contains 3 main modules:
@@ -22,9 +22,9 @@ For the networking layer, services can be instantiated with different data sourc
 ## Thid-party libraries:
 I have used different third-party libraries to simplified the solution and to demostrate Cocoapods integration.
 
-1. **Alamofire**: Networking library (https://github.com/Alamofire/Alamofire)
-2. **Kingfisher**: Image loading library (https://github.com/onevcat/Kingfisher)
-3. **DSFSparkline**: Lightweight Charts library (https://github.com/dagronf/DSFSparkline)
+1. **[Alamofire](https://github.com/Alamofire/Alamofire)**: Networking library.
+2. **[Kingfisher](https://github.com/onevcat/Kingfisher)**: Image loading library.
+3. **[DSFSparkline](https://github.com/dagronf/DSFSparkline)**: Lightweight Charts library.
 
 ## Unit tests:
 Unit testing have been implemented to demostrate the solution's unit testing capability.
