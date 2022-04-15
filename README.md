@@ -24,3 +24,5 @@ I have used different third-party libraries to simplified the solution and to de
 2. Kingfisher: Image loading library (https://github.com/onevcat/Kingfisher)
 3. DSFSparkline: Lightweight Charts library (https://github.com/dagronf/DSFSparkline)
 
+## Unit tests:
+Unit testing have been implemented to demostrate the solution's unit testing capability.
