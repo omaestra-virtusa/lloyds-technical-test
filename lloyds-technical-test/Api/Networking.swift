@@ -26,9 +26,13 @@ final class AlamofireNetworking: NetworkingProtocol {
                 case .success(let result):
                     completion(.success(result))
                 case .failure(let error):
-                    let apiError = APIError(code: .undefined,
-                                            message: error.localizedDescription)
-                    completion(.failure(apiError))
+                    if let data = response.data, let apiError = try? decoder.decode(APIError.self, from: data) {
+                        completion(.failure(apiError))
+                    } else {
+                        let apiError = APIError(code: .undefined,
+                                                message: error.localizedDescription)
+                        completion(.failure(apiError))
+                    }
                 }
             }
     }
