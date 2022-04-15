@@ -6,12 +6,16 @@
 //
 
 import Foundation
+import Alamofire
 
 protocol StocksServiceProtocol {
     var network: NetworkingProtocol { get }
     
-    func fetchLatestQuotes(symbols: [String], completion: @escaping (Result<[Quote], Error>) -> Void)
-    func fetchIntradayData(symbols: [String], completion: @escaping (Result<[IntradayModel], Error>) -> Void)
+    func fetchLatestQuotes(symbols: [String],
+                           completion: @escaping (Result<[Quote], APIError>) -> Void)
+    func fetchIntradayData(symbols: [String],
+                           interval: Constants.DateInterval,
+                           completion: @escaping (Result<[IntradayModel], APIError>) -> Void)
 }
 
 final class StocksService: StocksServiceProtocol {
@@ -21,14 +25,15 @@ final class StocksService: StocksServiceProtocol {
         self.network = network
     }
     
-    func fetchLatestQuotes(symbols: [String], completion: @escaping (Result<[Quote], Error>) -> Void) {
-        network.execute(.stockData(symbols: symbols)) { (result: Result<APIResponseWrapper<[Quote]>?, Error>) in
+    func fetchLatestQuotes(symbols: [String],
+                           completion: @escaping (Result<[Quote], APIError>) -> Void) {
+        network.execute(.stockData(symbols: symbols)) { (result: Result<APIResponseWrapper<[Quote]>?, APIError>) in
             switch result {
             case .success(let response):
                 if let quotes = response?.data {
                     completion(.success(quotes))
-                } else{
-                    completion(.failure(NSError()))
+                } else {
+                    completion(.failure(APIError.genericError))
                 }
             case .failure(let error):
                 completion(.failure(error))
@@ -36,14 +41,17 @@ final class StocksService: StocksServiceProtocol {
         }
     }
     
-    func fetchIntradayData(symbols: [String], completion: @escaping (Result<[IntradayModel], Error>) -> Void) {
-        network.execute(.intradayData(symbols: symbols)) { (result: Result<APIResponseWrapper<[IntradayModel]>?, Error>) in
+    func fetchIntradayData(symbols: [String],
+                           interval: Constants.DateInterval,
+                           completion: @escaping (Result<[IntradayModel], APIError>) -> Void) {
+        network.execute(.intradayData(symbols: symbols,
+                                      interval: interval)) { (result: Result<APIResponseWrapper<[IntradayModel]>?, APIError>) in
             switch result {
             case .success(let response):
                 if let intradayModel = response?.data {
                     completion(.success(intradayModel))
                 } else{
-                    completion(.failure(NSError()))
+                    completion(.failure(APIError.genericError))
                 }
             case .failure(let error):
                 completion(.failure(error))

@@ -32,7 +32,7 @@ class StockQuoteTableViewCell: UITableViewCell, ReusableView, NibLoadableView {
         subtitleLabel.text = quote.name
         priceValueLabel.text = "\(quote.currency) \(quote.price.description)"
         
-        let operatorString = quote.dayChange > 0 ? "+" : "-"
+        let operatorString = quote.dayChange > 0 ? "" : ""
         dayChangeTagView.valueLabel.text = "\(operatorString)\(quote.dayChange.description)"
         dayChangeTagView.color = quote.dayChange > 0 ? .systemGreen : .systemRed
         dayChangeTagView.valueLabel.textAlignment = .right

@@ -12,7 +12,7 @@ protocol Navigator {
     associatedtype Destination
     
 //    var finishDelegate: NavigatorFinishDelegate? { get set }
-//    var navigationController: UINavigationController { get set }
+    var navigationController: UINavigationController? { get set }
 //    var childNavigators: [Navigator] { get set }
 //    var type: NavigationType { get }
 //    func start()

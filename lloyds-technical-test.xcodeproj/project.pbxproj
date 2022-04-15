@@ -33,9 +33,27 @@
 		CE170F502807661900A18449 /* TagLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE170F4F2807661900A18449 /* TagLabelView.xib */; };
 		CE170F52280766B000A18449 /* TagLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F51280766B000A18449 /* TagLabelView.swift */; };
 		CE170F542807742900A18449 /* IntradayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F532807742900A18449 /* IntradayModel.swift */; };
+		CE170F57280884AF00A18449 /* StockDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F55280884AF00A18449 /* StockDetailsViewController.swift */; };
+		CE170F58280884AF00A18449 /* StockDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE170F56280884AF00A18449 /* StockDetailsViewController.xib */; };
+		CE170F5A28088EA000A18449 /* StockDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F5928088EA000A18449 /* StockDetailsPresenter.swift */; };
+		CE170F622808D1EF00A18449 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F612808D1EF00A18449 /* Constants.swift */; };
+		CE170F652808D26700A18449 /* DateIntervalsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F632808D26700A18449 /* DateIntervalsCollectionViewCell.swift */; };
+		CE170F662808D26700A18449 /* DateIntervalsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE170F642808D26700A18449 /* DateIntervalsCollectionViewCell.xib */; };
+		CE170F682808D55C00A18449 /* DateIntervalsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F672808D55C00A18449 /* DateIntervalsCollectionView.swift */; };
+		CE170F6A2808DDD600A18449 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F692808DDD500A18449 /* APIError.swift */; };
+		CE170F6C2808ECCB00A18449 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F6B2808ECCB00A18449 /* ErrorView.swift */; };
+		CE170F6E2808ECD600A18449 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE170F6D2808ECD600A18449 /* ErrorView.xib */; };
+		CE170F742809017E00A18449 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F722809017E00A18449 /* NewsViewController.swift */; };
+		CE170F752809017E00A18449 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE170F732809017E00A18449 /* NewsViewController.xib */; };
+		CE170F792809027600A18449 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F772809027600A18449 /* NewsTableViewCell.swift */; };
+		CE170F7A2809027600A18449 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE170F782809027600A18449 /* NewsTableViewCell.xib */; };
+		CE170F7C2809055900A18449 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F7B2809055900A18449 /* News.swift */; };
+		CE170F7E2809069E00A18449 /* NewsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F7D2809069E00A18449 /* NewsListPresenter.swift */; };
+		CE170F802809076D00A18449 /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F7F2809076D00A18449 /* NewsService.swift */; };
+		CE170F8328090DEF00A18449 /* NewsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170F8228090DEF00A18449 /* NewsNavigator.swift */; };
+		CE170F8528090FAF00A18449 /* mockNews.json in Resources */ = {isa = PBXBuildFile; fileRef = CE170F8428090FAF00A18449 /* mockNews.json */; };
 		CE5E3FAD2806FA4D00C03FDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E3FAC2806FA4D00C03FDB /* AppDelegate.swift */; };
 		CE5E3FAF2806FA4D00C03FDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E3FAE2806FA4D00C03FDB /* SceneDelegate.swift */; };
-		CE5E3FB12806FA4D00C03FDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E3FB02806FA4D00C03FDB /* ViewController.swift */; };
 		CE5E3FB42806FA4D00C03FDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5E3FB22806FA4D00C03FDB /* Main.storyboard */; };
 		CE5E3FB62806FA5100C03FDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5E3FB52806FA5100C03FDB /* Assets.xcassets */; };
 		CE5E3FB92806FA5100C03FDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5E3FB72806FA5100C03FDB /* LaunchScreen.storyboard */; };
@@ -70,10 +88,28 @@
 		CE170F4F2807661900A18449 /* TagLabelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagLabelView.xib; sourceTree = "<group>"; };
 		CE170F51280766B000A18449 /* TagLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagLabelView.swift; sourceTree = "<group>"; };
 		CE170F532807742900A18449 /* IntradayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntradayModel.swift; sourceTree = "<group>"; };
+		CE170F55280884AF00A18449 /* StockDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailsViewController.swift; sourceTree = "<group>"; };
+		CE170F56280884AF00A18449 /* StockDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockDetailsViewController.xib; sourceTree = "<group>"; };
+		CE170F5928088EA000A18449 /* StockDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailsPresenter.swift; sourceTree = "<group>"; };
+		CE170F612808D1EF00A18449 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CE170F632808D26700A18449 /* DateIntervalsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateIntervalsCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE170F642808D26700A18449 /* DateIntervalsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateIntervalsCollectionViewCell.xib; sourceTree = "<group>"; };
+		CE170F672808D55C00A18449 /* DateIntervalsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateIntervalsCollectionView.swift; sourceTree = "<group>"; };
+		CE170F692808DDD500A18449 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		CE170F6B2808ECCB00A18449 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		CE170F6D2808ECD600A18449 /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
+		CE170F722809017E00A18449 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		CE170F732809017E00A18449 /* NewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
+		CE170F772809027600A18449 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		CE170F782809027600A18449 /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
+		CE170F7B2809055900A18449 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		CE170F7D2809069E00A18449 /* NewsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListPresenter.swift; sourceTree = "<group>"; };
+		CE170F7F2809076D00A18449 /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
+		CE170F8228090DEF00A18449 /* NewsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsNavigator.swift; sourceTree = "<group>"; };
+		CE170F8428090FAF00A18449 /* mockNews.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mockNews.json; sourceTree = "<group>"; };
 		CE5E3FA92806FA4D00C03FDB /* lloyds-technical-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lloyds-technical-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5E3FAC2806FA4D00C03FDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE5E3FAE2806FA4D00C03FDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE5E3FB02806FA4D00C03FDB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE5E3FB32806FA4D00C03FDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE5E3FB52806FA5100C03FDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE5E3FB82806FA5100C03FDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -118,6 +154,8 @@
 				CE170F232807216A00A18449 /* MainTabBarViewController.swift */,
 				CE170F2D28073D6200A18449 /* StocksTableViewController.swift */,
 				CE170F2E28073D6200A18449 /* StocksTableViewController.xib */,
+				CE170F55280884AF00A18449 /* StockDetailsViewController.swift */,
+				CE170F56280884AF00A18449 /* StockDetailsViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -126,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				CE170F3228073D7F00A18449 /* StocksListPresenter.swift */,
+				CE170F5928088EA000A18449 /* StockDetailsPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -164,6 +203,11 @@
 			children = (
 				CE170F4F2807661900A18449 /* TagLabelView.xib */,
 				CE170F51280766B000A18449 /* TagLabelView.swift */,
+				CE170F632808D26700A18449 /* DateIntervalsCollectionViewCell.swift */,
+				CE170F642808D26700A18449 /* DateIntervalsCollectionViewCell.xib */,
+				CE170F672808D55C00A18449 /* DateIntervalsCollectionView.swift */,
+				CE170F6B2808ECCB00A18449 /* ErrorView.swift */,
+				CE170F6D2808ECD600A18449 /* ErrorView.xib */,
 			);
 			path = "Reusable Views";
 			sourceTree = "<group>";
@@ -174,6 +218,49 @@
 				CE170F4B2807646100A18449 /* UIView+.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE170F6F2809013300A18449 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE170F7B2809055900A18449 /* News.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE170F702809013A00A18449 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE170F762809021F00A18449 /* Cells */,
+				CE170F722809017E00A18449 /* NewsViewController.swift */,
+				CE170F732809017E00A18449 /* NewsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE170F712809013E00A18449 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CE170F7D2809069E00A18449 /* NewsListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CE170F762809021F00A18449 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CE170F772809027600A18449 /* NewsTableViewCell.swift */,
+				CE170F782809027600A18449 /* NewsTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CE170F8128090DE300A18449 /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				CE170F8228090DEF00A18449 /* NewsNavigator.swift */,
+			);
+			path = Navigator;
 			sourceTree = "<group>";
 		};
 		CE5E3FA02806FA4D00C03FDB = {
@@ -204,7 +291,6 @@
 				CE5E3FC02806FA9200C03FDB /* Modules */,
 				CE5E3FAC2806FA4D00C03FDB /* AppDelegate.swift */,
 				CE5E3FAE2806FA4D00C03FDB /* SceneDelegate.swift */,
-				CE5E3FB02806FA4D00C03FDB /* ViewController.swift */,
 				CE5E3FB22806FA4D00C03FDB /* Main.storyboard */,
 				CE5E3FB52806FA5100C03FDB /* Assets.xcassets */,
 				CE5E3FB72806FA5100C03FDB /* LaunchScreen.storyboard */,
@@ -217,7 +303,6 @@
 			isa = PBXGroup;
 			children = (
 				CE5E3FC62806FB0700C03FDB /* News */,
-				CE5E3FC52806FB0100C03FDB /* Account */,
 				CE5E3FC42806FAF800C03FDB /* Stocks */,
 			);
 			path = Modules;
@@ -226,6 +311,7 @@
 		CE5E3FC12806FA9B00C03FDB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CE170F8428090FAF00A18449 /* mockNews.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -240,6 +326,7 @@
 				CE170F27280723A800A18449 /* AppNavigator.swift */,
 				CE170F292807306D00A18449 /* TabNavigator.swift */,
 				CE170F2B280730AC00A18449 /* TabBarPage.swift */,
+				CE170F612808D1EF00A18449 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -251,6 +338,8 @@
 				CE170F132807021300A18449 /* URLRequestBuilder.swift */,
 				CE170F172807032600A18449 /* Endpoint.swift */,
 				CE170F192807054500A18449 /* StocksService.swift */,
+				CE170F692808DDD500A18449 /* APIError.swift */,
+				CE170F7F2809076D00A18449 /* NewsService.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -266,16 +355,13 @@
 			path = Stocks;
 			sourceTree = "<group>";
 		};
-		CE5E3FC52806FB0100C03FDB /* Account */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Account;
-			sourceTree = "<group>";
-		};
 		CE5E3FC62806FB0700C03FDB /* News */ = {
 			isa = PBXGroup;
 			children = (
+				CE170F8128090DE300A18449 /* Navigator */,
+				CE170F712809013E00A18449 /* Presenter */,
+				CE170F702809013A00A18449 /* View */,
+				CE170F6F2809013300A18449 /* Model */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -350,10 +436,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE170F3028073D6200A18449 /* StocksTableViewController.xib in Resources */,
+				CE170F662808D26700A18449 /* DateIntervalsCollectionViewCell.xib in Resources */,
 				CE170F3828073DC300A18449 /* StockQuoteTableViewCell.xib in Resources */,
 				CE5E3FB92806FA5100C03FDB /* LaunchScreen.storyboard in Resources */,
+				CE170F8528090FAF00A18449 /* mockNews.json in Resources */,
 				CE5E3FB62806FA5100C03FDB /* Assets.xcassets in Resources */,
 				CE170F502807661900A18449 /* TagLabelView.xib in Resources */,
+				CE170F6E2808ECD600A18449 /* ErrorView.xib in Resources */,
+				CE170F7A2809027600A18449 /* NewsTableViewCell.xib in Resources */,
+				CE170F752809017E00A18449 /* NewsViewController.xib in Resources */,
+				CE170F58280884AF00A18449 /* StockDetailsViewController.xib in Resources */,
 				CE5E3FB42806FA4D00C03FDB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,25 +502,37 @@
 				CE170F52280766B000A18449 /* TagLabelView.swift in Sources */,
 				CE170F182807032600A18449 /* Endpoint.swift in Sources */,
 				CE170F1F28070F8300A18449 /* Navigator.swift in Sources */,
-				CE5E3FB12806FA4D00C03FDB /* ViewController.swift in Sources */,
+				CE170F8328090DEF00A18449 /* NewsNavigator.swift in Sources */,
+				CE170F7E2809069E00A18449 /* NewsListPresenter.swift in Sources */,
+				CE170F5A28088EA000A18449 /* StockDetailsPresenter.swift in Sources */,
+				CE170F622808D1EF00A18449 /* Constants.swift in Sources */,
 				CE170F3728073DC300A18449 /* StockQuoteTableViewCell.swift in Sources */,
 				CE170F3328073D7F00A18449 /* StocksListPresenter.swift in Sources */,
 				CE170F2C280730AC00A18449 /* TabBarPage.swift in Sources */,
 				CE170F16280702DC00A18449 /* AppEnvironement.swift in Sources */,
+				CE170F6C2808ECCB00A18449 /* ErrorView.swift in Sources */,
 				CE170F3D28074E2100A18449 /* BaseView.swift in Sources */,
 				CE170F142807021300A18449 /* URLRequestBuilder.swift in Sources */,
 				CE170F3F280751C300A18449 /* NibLoadableView.swift in Sources */,
+				CE170F6A2808DDD600A18449 /* APIError.swift in Sources */,
 				CE170F2A2807306D00A18449 /* TabNavigator.swift in Sources */,
 				CE170F3B28074E0400A18449 /* BasePresenter.swift in Sources */,
 				CE170F212807100F00A18449 /* APIResponseWrapper.swift in Sources */,
 				CE170F2F28073D6200A18449 /* StocksTableViewController.swift in Sources */,
+				CE170F57280884AF00A18449 /* StockDetailsViewController.swift in Sources */,
 				CE170F1D280705A800A18449 /* Quote.swift in Sources */,
 				CE170F41280751D600A18449 /* ReusableView.swift in Sources */,
+				CE170F792809027600A18449 /* NewsTableViewCell.swift in Sources */,
+				CE170F802809076D00A18449 /* NewsService.swift in Sources */,
 				CE170F542807742900A18449 /* IntradayModel.swift in Sources */,
 				CE5E3FAD2806FA4D00C03FDB /* AppDelegate.swift in Sources */,
+				CE170F652808D26700A18449 /* DateIntervalsCollectionViewCell.swift in Sources */,
 				CE170F442807599C00A18449 /* StocksListNavigator.swift in Sources */,
 				CE5E3FAF2806FA4D00C03FDB /* SceneDelegate.swift in Sources */,
+				CE170F682808D55C00A18449 /* DateIntervalsCollectionView.swift in Sources */,
 				CE170F28280723A800A18449 /* AppNavigator.swift in Sources */,
+				CE170F7C2809055900A18449 /* News.swift in Sources */,
+				CE170F742809017E00A18449 /* NewsViewController.swift in Sources */,
 				CE170F252807216A00A18449 /* MainTabBarViewController.swift in Sources */,
 				CE170F1A2807054500A18449 /* StocksService.swift in Sources */,
 				CE5E3FC82806FD8600C03FDB /* Networking.swift in Sources */,

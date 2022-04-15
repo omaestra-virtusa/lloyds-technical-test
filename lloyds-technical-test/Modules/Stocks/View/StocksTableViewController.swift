@@ -10,34 +10,37 @@ import DSFSparkline
 
 protocol StocksViewProtocol: AnyObject {
     func updateView()
-    func displayError()
+    func displayError(title: String?, description: String?)
 }
 
 class StocksTableViewController: UITableViewController {
     var presenter: StocksListPresenterProtocol?
-    weak var navigator: StocksListNavigator?
+    var navigator: StocksListNavigator?
         
+    static func create(navigator: StocksListNavigator) -> StocksTableViewController {
+        let controller = StocksTableViewController()
+        let presenter = StocksListPresenter(service: StocksService(network: AlamofireNetworking()))
+        presenter.view = controller
+        controller.presenter = presenter
+        controller.navigator = navigator
+        
+        return controller
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupNavigationBar()
         setupTableView()
+        setupRefreshControl()
         
-        presenter?.fetchQuotes(for: ["AAPL", "TSLA", "MSFT"])
-        presenter?.fetchIntradayData(for: ["AAPL"])
-    }
-    
-    static func create() -> StocksTableViewController {
-        let controller = StocksTableViewController()
-        let presenter = StocksListPresenter(service: StocksService(network: AlamofireNetworking()))
-        presenter.view = controller
-        controller.presenter = presenter
-        
-        return controller
+        presenter?.fetchQuotes(for: Constants.initialSymbols)
+//        presenter?.fetchIntradayData(for: ["AAPL"], interval: .day)
     }
     
     private func setupNavigationBar() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(newsButtonTapped))
         self.title = "Stocks"
     }
     
@@ -50,6 +53,13 @@ class StocksTableViewController: UITableViewController {
         
         let nib = UINib(nibName: StockQuoteTableViewCell.nibName, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: StockQuoteTableViewCell.reuseIdentifier)
+    }
+    
+    private func setupRefreshControl() {
+        refreshControl = UIRefreshControl()
+        refreshControl?.backgroundColor = .clear
+        refreshControl?.tintColor = .systemIndigo
+        refreshControl?.addTarget(self, action: #selector(didPullToRefresh(_:)), for: .valueChanged)
     }
 
     // MARK: - Table view data source
@@ -76,14 +86,11 @@ class StocksTableViewController: UITableViewController {
             let data: [CGFloat] = intradayData.compactMap({
                 CGFloat($0.data.close)
             })
-            
+
             if !data.isEmpty {
-                let max = intradayData.max(by: { $0.data.close < $1.data.close }).map({ CGFloat($0.data.close) }) ?? 0.0
-                let min = intradayData.min(by: { $0.data.close < $1.data.close }).map({ CGFloat($0.data.close) }) ?? 0.0
-                
-                let sparklineDataSource = DSFSparkline.DataSource(values: data, range: min ... max)
+                let sparklineDataSource = DSFSparkline.DataSource(windowSize: 30, range: nil, zeroLineValue: 0)
                 cell.chartView.dataSource = sparklineDataSource
-                
+
                 DispatchQueue.main.async {
                     sparklineDataSource.set(values: data)
                 }
@@ -97,29 +104,32 @@ class StocksTableViewController: UITableViewController {
         guard let quote = presenter?.getQuote(at: indexPath) else {
             return
         }
-        navigator?.navigate(to: .quoteDetails(quote: quote), navigationType: .overlay)
+        self.navigator?.navigate(to: .quoteDetails(quote: quote), navigationType: .overlay)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
+    @objc func newsButtonTapped(_ sender: Any) {
+        navigator?.navigate(to: .news, navigationType: .overlay)
+    }
+    
+    @objc func didPullToRefresh(_ sender: Any) {
+        self.refreshControl?.beginRefreshing()
+        presenter?.fetchQuotes(for: Constants.initialSymbols)
+    }
 }
 
 extension StocksTableViewController: StocksViewProtocol {
     func updateView() {
+        self.refreshControl?.endRefreshing()
+        self.tableView.backgroundView = nil
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
     }
     
-    func displayError() {
-        // TODO: Display Error
+    func displayError(title: String?, description: String?) {
+        self.refreshControl?.endRefreshing()
+        let errorView = ErrorView(frame: self.tableView.frame)
+        errorView.setupView(title: title ?? "", message: description ?? "")
+        self.tableView.backgroundView = errorView
     }
 }

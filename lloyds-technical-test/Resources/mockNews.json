@@ -1,0 +1,88 @@
+{
+    "meta": {
+        "found": 50095,
+        "returned": 3,
+        "limit": 3,
+        "page": 1
+    },
+    "data": [
+        {
+            "uuid": "a14e9a1d-39aa-46f2-8585-06940f58709f",
+            "title": "Analysis-Canada's accelerated timetable for EVs brings spotlight on key bill By Reuters",
+            "description": "Analysis-Canada's accelerated timetable for EVs brings spotlight on key bill",
+            "keywords": "",
+            "snippet": "© Reuters. FILE PHOTO: A charging port is seen on a Mercedes Benz EQC 400 4Matic electric vehicle at the Canadian International AutoShow in Toronto, Ontario, C...",
+            "url": "https://www.investing.com/news/stock-market-news/analysiscanadas-accelerated-timetable-for-evs-brings-spotlight-on-key-bill-2803094",
+            "image_url": "https://i-invdn-com.investing.com/news/LYNXMPED6O0QG_L.jpg",
+            "language": "en",
+            "published_at": "2022-04-13T10:10:48.000000Z",
+            "source": "investing.com",
+            "relevance_score": null,
+            "entities": [
+                {
+                    "symbol": "TSLA",
+                    "name": "Tesla, Inc.",
+                    "exchange": "NASDAQ",
+                    "exchange_long": "NASDAQ Stock Exchange",
+                    "country": "us",
+                    "type": "equity",
+                    "industry": "Consumer Cyclical",
+                    "match_score": 13.887286,
+                    "sentiment_score": 0.3733,
+                    "highlights": [
+                        {
+                            "highlight": "FIGHT FOR DATA\n\nCurrently, computers in EV makers like Tesla (NASDAQ: ) are connected in a 'closed ecosystem,' making them inaccessible to typical mechanics.",
+                            "sentiment": -0.2103,
+                            "highlighted_in": "main_text"
+                        },
+                        {
+                            "highlight": "\"If you have a Tesla today, pretty much Tesla will determine where you go to get your car serviced, they'll determine which parts you put on and how much you're going to pay,\" said Champagne.\n\nTesla did not offer an immediate comment.",
+                            "sentiment": 0.6597,
+                            "highlighted_in": "main_text"
+                        },
+                        {
+                            "highlight": "But in 2020, Tesla urged its Massachusetts customers to vote against the updated ‘right to repair’ legislation, arguing it would pose security concerns. Tesla already has an open-source philosophy for much of its patented intellectual property, it said. Yet, Massachusetts voters approved the ‘right to repair’ bill.",
+                            "sentiment": 0.6705,
+                            "highlighted_in": "main_text"
+                        }
+                    ]
+                }
+            ],
+            "similar": []
+        },
+        {
+            "uuid": "6ec5b7b7-53fa-4134-9aa5-0e6f3f2caceb",
+            "title": "Stocks Higher, JPMorgan, Elon Musk, Cathie Wood And PayPal - Five Things You Must Know",
+            "description": "Stock futures higher as markets look to earnings boost; JPMorgan earnings on tap as Dimon details Russia hit; Twitter shareholder sues Elon Musk over stake building disclosure; Cathie wood says Twitter revenue model 'maybe isn't right', trims holdings and PayPal shares slide as CF Rainey departs for Walmart.",
+            "keywords": "Stock Market Futures, Stocks, Federal Reserve, Markets, 5 Things You Must Know, Investing, Earnings, Investment Banking, FUTURES, 5 Things To Know Before The Market Opens, MARKETS, INVESTING, STOCKS, Oil",
+            "snippet": "Stock futures higher as markets look to earnings boost; JPMorgan earnings on tap as Dimon details Russia hit; Twitter shareholder sues Elon Musk over stake buil...",
+            "url": "https://www.thestreet.com/markets/-5-things-you-must-know-before-market-opens-wednesday-041322",
+            "image_url": "https://www.thestreet.com/.image/t_share/MTc5NzgwNjA3MjM5MjY3NTY2/stock.jpg",
+            "language": "en",
+            "published_at": "2022-04-13T09:58:20.000000Z",
+            "source": "thestreet.com",
+            "relevance_score": null,
+            "entities": [
+                {
+                    "symbol": "TSLA",
+                    "name": "Tesla, Inc.",
+                    "exchange": "NASDAQ",
+                    "exchange_long": "NASDAQ Stock Exchange",
+                    "country": "us",
+                    "type": "equity",
+                    "industry": "Consumer Cyclical",
+                    "match_score": 14.309725,
+                    "sentiment_score": -0.6249,
+                    "highlights": [
+                        {
+                            "highlight": ". -- Twitter Shareholder Sues Elon Musk Over Stake Building Disclosure\n\nTesla (TSLA) - Get Tesla Inc Report CEO Elon Musk will face a lawsuit from former Twitter (TWTR) - Get Twitter, Inc. Report shareholders over his stake-building in the social media website amid allegations that he kept share prices low by failing to disclose his purchases.",
+                            "sentiment": -0.6249,
+                            "highlighted_in": "main_text"
+                        }
+                    ]
+                }
+            ],
+            "similar": []
+        }
+    ]
+}

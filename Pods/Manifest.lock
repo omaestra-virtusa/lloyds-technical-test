@@ -3,14 +3,17 @@ PODS:
   - DSFSparkline (4.1.2):
     - DSFSparkline/Core (= 4.1.2)
   - DSFSparkline/Core (4.1.2)
+  - Kingfisher (7.2.0)
 
 DEPENDENCIES:
   - Alamofire
   - DSFSparkline (from `https://github.com/dagronf/DSFSparkline/`)
+  - Kingfisher
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Kingfisher
 
 EXTERNAL SOURCES:
   DSFSparkline:
@@ -24,7 +27,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   DSFSparkline: 5afb02975d7c9f4acc4a94fbdf774796124d6b67
+  Kingfisher: 3ac0b75b155cabc0e544877d1a4deea29feece92
 
-PODFILE CHECKSUM: ba6e4ebd4cf489703856ad377ad5c8e2d034d596
+PODFILE CHECKSUM: 2df0ea8d3c70d4c98cd5c72a9ae08e0db4a4119f
 
 COCOAPODS: 1.11.3

@@ -7,6 +7,7 @@ target 'lloyds-technical-test' do
 
   # Pods for lloyds-technical-test
   pod 'Alamofire'
+  pod 'Kingfisher'
   pod 'DSFSparkline', :git => 'https://github.com/dagronf/DSFSparkline/'
 
 end

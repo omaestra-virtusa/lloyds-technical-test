@@ -14,7 +14,7 @@ protocol StocksListPresenterProtocol {
     var service: StocksServiceProtocol { get }
     
     func fetchQuotes(for symbols: [String])
-    func fetchIntradayData(for symbols: [String])
+    func fetchIntradayData(for symbols: [String], interval: Constants.DateInterval)
     func numberOfSectins() -> Int
     func numberOfRowsInSection(section: Int) -> Int
     func getQuotes() -> [Quote]?
@@ -42,21 +42,23 @@ class StocksListPresenter: StocksListPresenterProtocol {
                 self?.view?.updateView()
             case .failure(let error):
                 self?.quotes = nil
-                self?.view?.displayError()
+                self?.view?.displayError(title: error.code?.rawValue, description: error.message)
                 debugPrint(error)
             }
         })
     }
     
-    func fetchIntradayData(for symbols: [String]) {
-        service.fetchIntradayData(symbols: symbols) { [weak self] result in
+    func fetchIntradayData(for symbols: [String],
+                           interval: Constants.DateInterval) {
+        service.fetchIntradayData(symbols: symbols,
+                                  interval: interval) { [weak self] result in
             switch result {
             case .success(let intradayData):
                 self?.intradayData = intradayData
                 self?.view?.updateView()
             case .failure(let error):
                 self?.quotes = nil
-                self?.view?.displayError()
+                self?.view?.displayError(title: error.code?.rawValue, description: error.message)
                 debugPrint(error)
             }
         }

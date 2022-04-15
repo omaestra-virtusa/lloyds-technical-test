@@ -21,3 +21,25 @@ extension UIView {
         bottomConstraint.isActive = true
     }
 }
+
+extension UIViewController {
+    func showSpinner(onView: UIView) {
+        let spinnerView = UIView.init(frame: onView.bounds)
+        spinnerView.tag = -1001
+        spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.1)
+        let activityIndicator = UIActivityIndicatorView.init(style: .medium)
+        activityIndicator.startAnimating()
+        activityIndicator.center = spinnerView.center
+        
+        DispatchQueue.main.async {
+            spinnerView.addSubview(activityIndicator)
+            onView.addSubview(spinnerView)
+        }
+    }
+    
+    func removeSpinner() {
+        DispatchQueue.main.async {
+            self.view.viewWithTag(-1001)?.removeFromSuperview()
+        }
+    }
+}

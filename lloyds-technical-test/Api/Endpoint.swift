@@ -10,7 +10,8 @@ import Alamofire
 
 enum Endpoint: URLRequestBuilder {
     case stockData(symbols: [String])
-    case intradayData(symbols: [String])
+    case intradayData(symbols: [String], interval: Constants.DateInterval)
+    case news
 }
 
 extension Endpoint {
@@ -20,6 +21,8 @@ extension Endpoint {
             return "v1/data/quote"
         case .intradayData:
             return "v1/data/intraday"
+        case .news:
+            return "v1/news/all"
         }
     }
     
@@ -27,7 +30,7 @@ extension Endpoint {
     
     var method: HTTPMethod {
         switch self {
-        case .stockData, .intradayData:
+        case .stockData, .intradayData, .news:
             return .get
         }
     }
@@ -35,25 +38,38 @@ extension Endpoint {
     // MARK: - Parameters
     
     internal var parameters: Parameters? {
+        var parameters: Parameters? = ["api_token": AppEnvironment.authToken]
+        
         switch self {
         case .stockData(let symbols):
-            return [
-                "api_token": AppEnvironment.authToken,
-                "symbols": symbols.joined(separator: ","),
-            ]
-        case .intradayData(let symbols):
-            return [
-                "api_token": AppEnvironment.authToken,
-                "symbols": symbols.joined(separator: ","),
-                "interval": "day"
-            ]
+            parameters?["symbols"] = symbols.joined(separator: ",")
+            
+        case .intradayData(let symbols, let interval):
+            parameters?["symbols"] = symbols.joined(separator: ",")
+            parameters?["interval"] = interval.rawValue
+            
+        case .news:
+            break
         }
+        
+        return parameters
     }
     
     var encoding: URLEncoding {
         switch self {
         case .stockData, .intradayData:
             return .queryString
+        case .news:
+            return .default
+        }
+    }
+    
+    var mockFileName: String? {
+        switch self {
+        case .news:
+            return "mockNews"
+        default:
+            return nil
         }
     }
 }

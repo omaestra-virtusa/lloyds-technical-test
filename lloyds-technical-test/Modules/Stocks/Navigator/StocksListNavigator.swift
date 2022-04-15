@@ -12,9 +12,10 @@ final class StocksListNavigator: Navigator {
     enum Destination {
         case quotesList
         case quoteDetails(quote: Quote)
+        case news
     }
     
-    private weak var navigationController: UINavigationController?
+    internal weak var navigationController: UINavigationController?
 
     var rootViewController: UIViewController? {
         return navigationController
@@ -43,12 +44,23 @@ final class StocksListNavigator: Navigator {
     private func makeViewController(for destination: Destination) -> UIViewController {
         switch destination {
         case .quotesList:
-            let viewController = StocksTableViewController.create()
-            viewController.navigator = self
+            let viewController = StocksTableViewController.create(navigator: self)
             
             return viewController
         case .quoteDetails(let quote):
-            return UIViewController()
+            let service = StocksService(network: AlamofireNetworking())
+            let viewController = StockDetailsViewController.create(quote: quote,
+                                                                   navigator: self,
+                                                                   service: service)
+            
+            return viewController
+            
+        case .news:
+            let service = NewsService(network: MockNetworking())
+            let presenter = NewsListPresenter(service: service)
+            let viewController = NewsViewController.create(presenter: presenter)
+            
+            return viewController
         }
     }
 }
